@@ -1,4 +1,6 @@
-### FAQ : Path.mkdir()
+## FAQ : Path.mkdir()
+
+---
 
 Creates a **new path** at the given location.
 
