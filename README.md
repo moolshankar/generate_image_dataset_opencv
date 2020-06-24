@@ -1,7 +1,5 @@
 ## FAQ : Path.mkdir()
 
----
-
 Creates a **new path** at the given location.
 
 If **parents** is set to **true**, any missing parents of this path are created as needed.
