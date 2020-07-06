@@ -19,11 +19,11 @@ count = 1
 
 
 # Function to save the image
-def saveImage(img, userName, userId, imgId):
+def saveImage(image, userName, userId, imgId):
     # Create a folder with the name as userName
     Path("dataset/{}".format(userName)).mkdir(parents=True, exist_ok=True)
     # Save the images inside the previously created folder
-    cv2.imwrite("dataset/{}/{}_{}.jpg".format(userName, userId, imgId), img)
+    cv2.imwrite("dataset/{}/{}_{}.jpg".format(userName, userId, imgId), image)
     print("[INFO] Image {} has been saved in folder : {}".format(
         imgId, userName))
 
@@ -35,7 +35,7 @@ while True:
     _, img = vc.read()
 
     # assign the image to a variable called original_img to later save it
-    original_img = img
+    original_img = img.copy()
 
     # Get the gray version of our image
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
